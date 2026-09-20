@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/end_screen.gd" id="1_end"]
+
+[node name="EndScreen" type="CanvasLayer"]
+layer = 25
+script = ExtResource("1_end")
+
+[node name="Root" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.02, 0.12, 0.85)
+
+[node name="Center" type="CenterContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Box" type="VBoxContainer" parent="Root/Center"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "THE ECHOES HAVE BEEN RESTORED"
+horizontal_alignment = 1
+
+[node name="RankLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "RANK"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Root/Center/Box"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "FINAL SCORE: 0000"
+horizontal_alignment = 1
+
+[node name="EchoesLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "ECHOES COLLECTED: 0/10"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "TIME: 0:00"
+horizontal_alignment = 1
+
+[node name="DeathsLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "FALLS AND HITS: 0"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="Root/Center/Box"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="ReplayButton" type="Button" parent="Root/Center/Box"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY AGAIN"
+
+[node name="HintLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "Press R or Enter to play again"
+horizontal_alignment = 1

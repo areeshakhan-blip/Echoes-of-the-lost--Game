@@ -1,0 +1,24 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-generated import cache and editor data
+*.translation
+.import/
+export.cfg
+.mono/
+data_*/
+mono_crash.*.json
+
+# Web / desktop export output (upload the zip to itch.io instead of committing it)
+/exports/
+/build/
+*.zip
+*.pck
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+.idea/

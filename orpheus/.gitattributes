@@ -1,0 +1,4 @@
+# Normalize line endings so the project behaves the same on every OS.
+* text=auto eol=lf
+*.png binary
+*.svg text

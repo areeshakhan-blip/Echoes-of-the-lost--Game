@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/title_screen.gd" id="1_title"]
+
+[node name="TitleScreen" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_title")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.03, 0.02, 0.12, 0.62)
+
+[node name="Center" type="CenterContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Box" type="VBoxContainer" parent="Root/Center"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "ORPHEUS"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "ECHOES OF THE LOST"
+horizontal_alignment = 1
+
+[node name="TaglineLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "The world has fallen silent. Find the Echo Shards and restore its voice."
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Root/Center/Box"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Root/Center/Box"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY"
+
+[node name="ControlsLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "A / D  or  Arrow Keys   Move          Space / W / Up   Jump          R   Respawn          ESC   Pause"
+horizontal_alignment = 1
+
+[node name="CreditLabel" type="Label" parent="Root/Center/Box"]
+layout_mode = 2
+text = "A Hack Club Jumpstart Haven project"
+horizontal_alignment = 1
